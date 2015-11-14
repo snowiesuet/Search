@@ -26,6 +26,15 @@ input.searchBox {
   font-size: 1.3em;
 }
 
+input.searchBox:focus {
+  border: 3px solid #10689a;
+}
+
+input.searchBox::-webkit-input-placeholder {
+  color: #10689a;
+  font-style: italic;
+}
+
 #searchResults {
   background: white;
 }
@@ -42,17 +51,17 @@ input.searchBox {
   background: white;
   border: 1px solid #d3d3d3;
   position: absolute;
-  width: 400px;
-  height: 100px;
+  width: 450px;
+  height: 130px;
   top: 0;
-  left: 250px;
+  right: -115px;
   display: none;
   z-index: 1;
   font-size: 0.7em;
   color: gray;
 }
 
-#searchResults #searchDetails:hover {
+#searchResults .searchTemplate:hover {
   background: #eeffff;
 }
 
@@ -67,8 +76,8 @@ input.searchBox {
 
 #searchResults #searchDetails img {
   float: left;
-  width: 150px;
-  height: 100px;
+  width: 200px;
+  height: 130px;
   margin-right: 20px;
 }
 
