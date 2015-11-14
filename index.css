@@ -39,7 +39,7 @@ input.searchBox {
   background: white;
   border: 1px solid #d3d3d3;
   position: absolute;
-  width: 500px;
+  width: 400px;
   height: 100px;
   top: 0;
   left: 250px;
@@ -70,4 +70,10 @@ input.searchBox {
   width: 150px;
   height: 100px;
   margin-right: 20px;
+}
+
+label[for=withPeople] {
+  display: inline-block;
+  width: 170px;
+  margin: 10px 0;
 }

@@ -1,8 +1,8 @@
 'use strict'
 
-function onChangeTest() {
+function onChange () {
     $('#searchResults').html('')
-    const withPeople = document.getElementsByName('withPeople')[0].checked
+    const withPeople = document.getElementById('withPeople').checked
     const searchText =  document.getElementsByName('searchBox')[0].value
     const timeStamp = Date.now()
     $.ajax({
@@ -10,10 +10,9 @@ function onChangeTest() {
     }).done(dataset => {
       if (dataset.length > 0) {
         dataset.forEach(data => {
-          let episodes = ''
-          let available = data.blocked ? 'No' : 'Yes'
-          let country = data.oc ? data.oc : ''
-          episodes = data.e ? (`(${data.e} episodes)`) : ''
+          const available = data.blocked ? 'No' : 'Yes'
+          const country = data.oc ? ` Country of Origin: ${(data.oc).toUpperCase()}` : ''
+          const episodes = data.e ? `(${data.e} episodes)` : ''
           const searchTemplate =
           `<div class="searchTemplate">
             ${data.tt}
@@ -22,7 +21,7 @@ function onChangeTest() {
             <div class="searchDesc">
             Type: ${data.t} ${episodes}
             <br> Available in your region: ${available}
-            <br> Country of Origin: ${country}
+            <br> ${country}
           </div></div></div>`
           $('#searchResults').append(searchTemplate)
         })
@@ -30,6 +29,5 @@ function onChangeTest() {
       else {
         $('#searchResults').html(`<div class="searchTemplate">No data available.</div>`)
       }
-
     })
 }

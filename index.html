@@ -10,8 +10,10 @@
 <body>
   <div class="main">
     <div class="search">
-      <input class="searchBox" placeholder="Type to search" name="searchBox" type="text" onkeyup="onChangeTest()"></input>
-      <input name="withPeople" onchange="onChangeTest()" type="checkbox">include people</input>
+      <div class="row">
+        <input class="searchBox" placeholder="Type to search" name="searchBox" type="text" onkeyup="onChange()"></input>
+        <label for="withPeople"><input type="checkbox" id="withPeople" onchange="onChange()">include people</label>
+      </div>
       <div id="searchResults"></div>
     </div>
   </div>
