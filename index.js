@@ -1,12 +1,9 @@
 'use strict'
 
+//search should disappear when onBlur
 function onBlur () {
-  console.log('hello ㅠㅠ')
   $('#searchResults').hide()
 }
-
-const searchBox = document.getElementsByName('searchBox')[0]
-searchBox.onblur = onBlur
 
 function onChange () {
     //clear the search results from previous search
@@ -17,6 +14,7 @@ function onChange () {
     $.ajax({
       url: `https://api.viki.io/v4/search.json?c=${searchText}&per_page=5&with_people=${withPeople}&app=100266a&t=${timeStamp}`,
     }).done(dataset => {
+      $('#searchResults').show()
       if (dataset.length > 0) {
         dataset.forEach(data => {
           //only display data when available

@@ -12,8 +12,7 @@
   <div class="main">
     <div class="search">
       <div class="row">
-        <input class="searchBox" placeholder="Type to search" name="searchBox" type="text" onkeyup="onChange()"></input>
-        <img src="http://www.sseluxx.com/wp-content/themes/SsEluxX-Blue/images/social/boxed/search-icon.png?36d88b"/>
+        <input class="searchBox" placeholder="Type to search" name="searchBox" type="text" onblur="onBlur()" onkeyup="onChange()"></input>
         <label for="withPeople"><input type="checkbox" id="withPeople" onchange="onChange()">include people</label>
       </div>
       <div id="searchResults"></div>
