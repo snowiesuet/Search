@@ -11,8 +11,11 @@ body {
 }
 
 .search {
-  margin-top: 10%;
   width: 50%;
+}
+
+.row {
+  margin-top: 20%;
 }
 
 input.searchBox {
@@ -49,7 +52,6 @@ input.searchBox {
   color: gray;
 }
 
-
 #searchResults #searchDetails:hover {
   background: #eeffff;
 }
@@ -59,11 +61,9 @@ input.searchBox {
   display: inline-block;
 }
 
-
 #searchResults div:hover #searchDetails {
   display: block;
 }
-
 
 #searchResults #searchDetails img {
   float: left;

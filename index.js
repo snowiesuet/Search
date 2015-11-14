@@ -1,6 +1,7 @@
 'use strict'
 
 function onChange () {
+    //clear the search results from previous search
     $('#searchResults').html('')
     const withPeople = document.getElementById('withPeople').checked
     const searchText =  document.getElementsByName('searchBox')[0].value
