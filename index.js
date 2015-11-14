@@ -1,4 +1,5 @@
 'use strict'
+
 function onChangeTest() {
     $('#searchResults').html('')
     let with_people = document.getElementsByName('with_people')[0].checked
@@ -9,8 +10,9 @@ function onChangeTest() {
       let episodes = ''
       data.forEach(name => {
         episodes = (name.e ? ('Episodes: ' + name.e) : '')
-        let searchTemplate = '<div class="searchTemplate">'
-        + name.tt + '<div id="searchDetails"><img src="'+name.i+'"/>Type: ' +name.t +'<br>' + episodes  +'</div>  </div>'
+        let searchTemplate = `<div class="searchTemplate">
+         ${name.tt} <div id="searchDetails"><img src=${name.i}/>Type: ${name.t}
+        <br> ${episodes}  </div>  </div>`
         $('#searchResults').append(searchTemplate)
       })
     })
