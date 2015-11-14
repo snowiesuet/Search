@@ -1,7 +1,6 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.3em;
-  color: white;
   background-color: #47a3da;
 }
 
@@ -16,7 +15,7 @@ body {
   width: 50%;
 }
 
-input[type='text'] {
+input.searchBox {
   background: transparent;
   border: 3px solid #fff;
   border-radius: 3px;
@@ -37,26 +36,36 @@ input[type='text'] {
 }
 
 #searchDetails {
-  background-color: white;
+  background: white;
   border: 1px solid #d3d3d3;
   position: absolute;
   width: 500px;
   height: 100px;
-  right: 0;
+  top: 0;
+  left: 250px;
   display: none;
   z-index: 1;
+  font-size: 0.7em;
+  color: gray;
 }
 
 
-#searchResults div:hover {
-  background: #EEFFFF;
+#searchResults #searchDetails:hover {
+  background: #eeffff;
 }
+
+#searchResults #searchDetails .searchDesc {
+  padding-top: 15px;
+  display: inline-block;
+}
+
 
 #searchResults div:hover #searchDetails {
   display: block;
 }
 
-#searchResults img {
+
+#searchResults #searchDetails img {
   float: left;
   width: 150px;
   height: 100px;
